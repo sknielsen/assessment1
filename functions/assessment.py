@@ -208,6 +208,28 @@ def calculate_price(base_price, state_abbr, tax=.05):
 #        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
 
 
+def append_to_list(list, *items):
+    """Returns list where all items given have been appended to the list given"""
+
+    # Iterate over items given 
+    for item in items:
+        # Add to list
+        list.append(item)
+
+    return list
+
+
+def word_to_tuple(word):
+    """Returns a tuple with the word as the first item and the word repeated three times as the second item"""
+
+    def triple_word(word):
+        """Return given word as a string multiplied three times"""
+        return word * 3
+
+    word_three_times = triple_word(word)
+    return (word, word_three_times)
+
+
 ###############################################################################
 
 # END OF ASSESSMENT: You can ignore everything below.
